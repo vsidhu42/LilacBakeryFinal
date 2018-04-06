@@ -12,6 +12,6 @@ ActiveAdmin.register FoodOrder do
 #   permitted
 # end
 
-  permit_params :ordnum, :active, :paid, :cost, :notes, :food_id
+  permit_params :ordernum, :active, :paid, :cost, :notes, :food_id
 
 end
