@@ -1,0 +1,26 @@
+<h2>Order <%= food_order.ordnum %></h2>
+<p>
+  <strong>Item Name: </strong>
+  <%= food_order.food.name %>
+</p>
+<p>
+  <strong>Description: </strong>
+  <%= food_order.food.desc %>
+</p>
+<p>
+  <strong>Size: </strong>
+  <%= food_order.food.quantity %>
+</p>
+<p>
+  <strong>Cost: </strong>
+  <%= food_order.food.cost %>
+</p>
+<p>
+  <strong>Notes: </strong>
+  <%= food_order.notes %>
+</p>
+<% if show_details_link %>
+  <p>
+    <%= link_to 'View Details', food_order %>
+  </p>
+<% end %>

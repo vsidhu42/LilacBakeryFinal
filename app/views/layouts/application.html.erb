@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>LilacBakeryProject</title>
+    <title>Lilac Bakery Project</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +9,7 @@
   </head>
 
   <body>
+    <%= render partial: 'shared/header_menu' %>
     <%= yield %>
   </body>
 </html>
