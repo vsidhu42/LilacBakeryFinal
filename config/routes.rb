@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'foods/index'
+
+  get 'foods/show'
+
   resources :food_orders, only: [:index, :show]
 
   root to: 'food_orders#index'
