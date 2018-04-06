@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ordernum: 1
+  active: false
+  paid: false
+  cost: 9.99
+  notes: MyString
+  food: one
+
+two:
+  ordernum: 1
+  active: false
+  paid: false
+  cost: 9.99
+  notes: MyString
+  food: two
