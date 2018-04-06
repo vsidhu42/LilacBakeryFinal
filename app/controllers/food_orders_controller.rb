@@ -1,6 +1,6 @@
 class FoodOrdersController < ApplicationController
   def index
-    @food_orders = FoodOrder.order(:ordnum)
+    @food_orders = FoodOrder.order(:ordernum)
   end
 
   def show
