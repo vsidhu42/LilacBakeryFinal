@@ -1,12 +1,14 @@
 Rails.application.routes.draw do
 
-  get 'foods/index'
+  get 'food_orders/index'
 
-  get 'foods/show'
+  get 'foods_orders/show'
+
+  resources :foods, only: [:index, :show]
 
   resources :food_orders, only: [:index, :show]
 
-  root to: 'food_orders#index'
+  root to: 'foods#index'
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
