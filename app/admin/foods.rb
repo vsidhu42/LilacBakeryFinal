@@ -12,6 +12,6 @@ ActiveAdmin.register Food do
 #   permitted
 # end
 
-  permit_params :name, :quantity, :desc, :cost, :category_id
+  permit_params :name, :quantity, :desc, :cost, :category_id, :picture
 
 end
