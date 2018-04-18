@@ -41,7 +41,7 @@ gem 'paperclip'
 gem 'carrierwave'
 gem 'mini_magick'
 
-gem 'will_paginate', '>= 3.0.7'
+gem 'will_paginate'
 
 gem 'kaminari'
 

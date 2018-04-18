@@ -2,7 +2,7 @@ class FoodsController < ApplicationController
   def index
 
     @search = Food.search(params[:q])
-    @foods = @search.result.page params[:page]
+    @foods = @search.result.paginate(page: params[:page], per_page: 5)
 
     #@foods = Food.page params[:page]
 

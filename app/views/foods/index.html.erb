@@ -13,5 +13,5 @@
 <%= render partial: 'food', collection: @foods, locals: { show_details_link: true } %>
 
 <div>
-  <%= paginate @foods %>
+  <%= will_paginate @foods %>
 </div>
