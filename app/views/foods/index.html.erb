@@ -1,3 +1,5 @@
 <h1>Foods</h1>
 
 <%= render partial: 'food', collection: @foods, locals: { show_details_link: true } %>
+
+<%= paginate @foods %>

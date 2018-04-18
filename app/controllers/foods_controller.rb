@@ -1,6 +1,7 @@
 class FoodsController < ApplicationController
   def index
-    @foods = Food.order(:id)
+    @foods = Food.page(params[:page]).per(5)
+    #@foods = Food.order(:id)
   end
 
   def show
