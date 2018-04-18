@@ -1,5 +1,17 @@
+<%= search_form_for @search do |f| %>
+  <div class="field">
+    <%= f.label :name_cont %>
+    <%= f.search_field :name_cont %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Search" %>
+  </div>
+<% end %>
+
 <h1>Foods</h1>
 
 <%= render partial: 'food', collection: @foods, locals: { show_details_link: true } %>
 
-<%= paginate @foods %>
+<div>
+  <%= paginate @foods %>
+</div>

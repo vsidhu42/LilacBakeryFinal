@@ -26,16 +26,18 @@
   <%= food.cost %>
 </p>
 
-<% if food.picture != "" %>
-  <%= image_tag food.picture %>
-<% end %>
-
-<% if food.picture != "" %>
-  <%= image_tag food.picture.thumb %>
-<% end %>
-
 <% if show_details_link %>
+  <p>
+    <% if food.picture != "" %>
+      <%= image_tag food.picture.thumb %>
+    <% end %>
+  </p>
+
   <p>
     <%= link_to 'View Details', food %>
   </p>
+<% else %>
+  <% if food.picture != "" %>
+    <%= image_tag food.picture %>
+  <% end %>
 <% end %>
