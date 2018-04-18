@@ -1,2 +1,3 @@
-<h1>Foods#index</h1>
-<p>Find me in app/views/foods/index.html.erb</p>
+<h1>Foods</h1>
+
+<%= render partial: 'food', collection: @foods, locals: { show_details_link: true } %>

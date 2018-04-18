@@ -1,0 +1,32 @@
+<h2>Item #<%= food.id %></h2>
+<% if food.created_at > (Time.now - 48.hours) %>
+  <p>
+    <strong>***NEW***</strong>
+  </p>
+<% end %>
+<% if food.updated_at > (Time.now - 48.hours) %>
+  <p>
+    <strong>***UPDATED***</strong>
+  </p>
+<% end %>
+<p>
+  <strong>Item Name: </strong>
+  <%= food.name %>
+</p>
+<p>
+  <strong>Description: </strong>
+  <%= food.desc %>
+</p>
+<p>
+  <strong>Size: </strong>
+  <%= food.quantity %>
+</p>
+<p>
+  <strong>Cost: </strong>
+  <%= food.cost %>
+</p>
+<% if show_details_link %>
+  <p>
+    <%= link_to 'View Details', food %>
+  </p>
+<% end %>
