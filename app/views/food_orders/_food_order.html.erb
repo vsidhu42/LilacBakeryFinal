@@ -1,4 +1,14 @@
 <h2>Order <%= food_order.ordernum %></h2>
+<% if food_order.created_at > (Time.now - 48.hours) %>
+  <p>
+    <strong>***NEW***</strong>
+  </p>
+<% end %>
+<% if food_order.updated_at > (Time.now - 48.hours) %>
+  <p>
+    <strong>***UPDATED***</strong>
+  </p>
+<% end %>
 <p>
   <strong>Item Name: </strong>
   <%= food_order.food.name %>
