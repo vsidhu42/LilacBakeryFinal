@@ -1,10 +1,28 @@
 <h1>About</h1>
 <p>
-  <% @aboutcontacts.theabout %>
+  <%= @theEntry.theabout %>
 </p>
 
 
 <h1>Contact Us</h1>
 <p>
-
+  Country: <%= @theEntry.thecountry %>
+</p>
+<p>
+  Province: <%= @theEntry.theprov %>
+</p>
+<p>
+  City: <%= @theEntry.thecity %>
+</p>
+<p>
+  Postal: <%= @theEntry.thepostal %>
+</p>
+<p>
+  Address: <%= @theEntry.theaddress %>
+</p>
+<p>
+  Phone: <%= @theEntry.thephone %>
+</p>
+<p>
+  Email: <%= @theEntry.theemail %>
 </p>
