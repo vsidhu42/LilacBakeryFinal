@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
 
-  get 'about_contact/show'
+  #get 'about_contacts/index'
+
+  #get 'about_contacts/show'
+
+  #get 'about_contacts/:id', to: 'about_contacts#show'
 
   get 'food_orders/index'
 
@@ -8,7 +12,7 @@ Rails.application.routes.draw do
 
   resources :foods, only: [:index, :show]
 
-  resources :about_contact, only: [:show]
+  resources :about_contacts, only: [:index, :show]
 
   resources :food_orders, only: [:index, :show]
 
