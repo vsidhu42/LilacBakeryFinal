@@ -9,9 +9,9 @@ end
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.5'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3', group:[:development, :test]
+gem 'sqlite3'
 
-gem 'pg', group:[:production]
+# gem 'pg', group:[:production]
 
 gem 'rails_12factor', group: :production
 
@@ -46,11 +46,13 @@ gem 'paperclip'
 gem 'carrierwave'
 gem 'mini_magick'
 
-gem 'will_paginate'
+gem 'will_paginate', '~> 3.1', '>= 3.1.6'
 
 gem 'kaminari'
 
 gem 'ransack'
+
+gem 'country_select'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
