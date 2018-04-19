@@ -1,9 +1,9 @@
 class CatCookController < ApplicationController
   def index
-    @cat_cooks = Food.where(category_id: 1)
+    @cat_cooks = Food.where(category_id: 3)
   end
 
   def show
-    @cat_cooks = Food.find(params[:id])
+    @cat_cook = Food.find(params[:id])
   end
 end

@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
 
+  get 'cat_cook/index'
+
+  get 'cat_cook/show'
+
+  get 'cat_cup/index'
+
+  get 'cat_cup/show'
+
   get 'cat_cake/index'
 
   get 'cat_cake/show'

@@ -1,0 +1,43 @@
+<h1>Category: Cookies</h1>
+
+<% @cat_cooks.each do |cat_cook|%>
+
+  <h2>Item #<%= cat_cook.id %></h2>
+  <% if cat_cook.created_at > (Time.now - 48.hours) %>
+    <p>
+      <strong>***NEW***</strong>
+    </p>
+  <% end %>
+  <% if cat_cook.updated_at > (Time.now - 48.hours) %>
+    <p>
+      <strong>***UPDATED***</strong>
+    </p>
+  <% end %>
+  <p>
+    <strong>Item Name: </strong>
+    <%= cat_cook.name %>
+  </p>
+  <p>
+    <strong>Description: </strong>
+    <%= cat_cook.desc %>
+  </p>
+  <p>
+    <strong>Size: </strong>
+    <%= cat_cook.quantity %>
+  </p>
+  <p>
+    <strong>Cost: </strong>
+    <%= cat_cook.cost %>
+  </p>
+
+  <p>
+    <% if cat_cook.picture != "" %>
+      <%= image_tag cat_cook.picture.thumb %>
+    <% end %>
+  </p>
+
+  <p>
+    <%= link_to 'View Details', cat_cook %>
+  </p>
+
+<% end %>
