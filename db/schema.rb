@@ -10,7 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180418153820) do
+ActiveRecord::Schema.define(version: 20180419102439) do
+
+  create_table "about_contacts", force: :cascade do |t|
+    t.string "theabout"
+    t.string "thecountry"
+    t.string "theprov"
+    t.string "thecity"
+    t.string "theaddress"
+    t.string "thephone"
+    t.string "thepostal"
+    t.string "theemail"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
