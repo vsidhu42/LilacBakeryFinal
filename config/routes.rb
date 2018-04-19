@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'cat_cake/index'
+
+  get 'cat_cake/show'
+
   #get 'about_contacts/index'
 
   #get 'about_contacts/show'
@@ -13,6 +17,8 @@ Rails.application.routes.draw do
   resources :foods, only: [:index, :show]
 
   resources :about_contacts, only: [:index, :show]
+
+  resources :cat_cake, only: [:index, :show]
 
   resources :food_orders, only: [:index, :show]
 

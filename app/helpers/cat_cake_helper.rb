@@ -1,0 +1,2 @@
+module CatCakeHelper
+end

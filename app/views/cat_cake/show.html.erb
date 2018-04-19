@@ -1,0 +1,33 @@
+<h2>Item #<%= @cat_cake.id %></h2>
+<% if @cat_cake.created_at > (Time.now - 48.hours) %>
+  <p>
+    <strong>***NEW***</strong>
+  </p>
+<% end %>
+<% if @cat_cake.updated_at > (Time.now - 48.hours) %>
+  <p>
+    <strong>***UPDATED***</strong>
+  </p>
+<% end %>
+<p>
+  <strong>Item Name: </strong>
+  <%= @cat_cake.name %>
+</p>
+<p>
+  <strong>Description: </strong>
+  <%= @cat_cake.desc %>
+</p>
+<p>
+  <strong>Size: </strong>
+  <%= @cat_cake.quantity %>
+</p>
+<p>
+  <strong>Cost: </strong>
+  <%= @cat_cake.cost %>
+</p>
+
+<p>
+  <% if @cat_cake.picture != "" %>
+    <%= image_tag @cat_cake.picture %>
+  <% end %>
+</p>
